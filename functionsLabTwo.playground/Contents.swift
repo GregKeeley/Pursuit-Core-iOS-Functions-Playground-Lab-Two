@@ -4,7 +4,17 @@ import UIKit
 
 // Write a function named average(of:) that returns the average of an array of Doubles
 
-func average
+//func average (of: [Double]) -> Double {
+//    return = total / x
+//    var total = [0.0]
+//    var x = (0)
+//    for num in of {
+//        total.append(num)
+//        x += 1
+//    }
+//    return total
+//}
+
 
 let testCasesOne: [([Double], Double)] = [
     (input: [1,2,3,4,5], expectedOutput: 3),
@@ -22,7 +32,14 @@ let testCasesOne: [([Double], Double)] = [
 
 // Write a function named frequencyDictionary(of:) that takes a String as input and returns a dictionary that maps each character its number of occurrances
 
-// Your function here
+//func frequencyDictionary (of: String) -> [Character: Int] {
+//    var result = [Character: Int]
+//    for (char, value) in of.enumerated() {
+//        result[Character] = char
+//        char.count = value
+//    }
+//    return result
+//}
 
 let testCasesTwo: [(String, [Character: Int])] = [
     (input: "hello", expectedOutput: ["h": 1, "e": 1, "l": 2, "o": 1]),
@@ -40,11 +57,25 @@ let testCasesTwo: [(String, [Character: Int])] = [
 
 // Write a function called fizzBuzz(upto:) that returns an array containing the numbers from 1 to n as Strings with the following replacements:
 
-// If the number if a multiple of 3, replace it with "Fizz"
+// If the number is a multiple of 3, replace it with "Fizz"
 // If the number is a multiple of 5, replace it with "Buzz"
 // If the number is a multiple of 3 AND 5, replace it with "FizzBuzz"
 
-// Your function here
+func fizzBuzz (upto: Int) -> [String] {
+    var result = [String]
+    for num in 1...upto {
+    if num % 3 == 0 {
+        result = ["Fizz"]
+    }
+    if num % 5 == 0 {
+        result = ["Buzz"]
+    }
+    if num % 3 == 0 && num % 5 == 0 {
+        result = ["FizzBuzz"]
+    }
+}
+    return result
+}
 
 let testCasesThree = [
     (input: 20, expectedOutput: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz"]),
